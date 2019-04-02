@@ -18,7 +18,7 @@ const ForecastDay = ({ item }) => {
         </div>
       </div>
       <div className='forecast__day-right'>
-        <img className='forecast__weather-icon' src={ICONS_BASE_URL + item.weather[0].icon + '.png'} />
+        <img className='forecast__weather-icon' src={ICONS_BASE_URL + item.weather[0].icon + '.png'} alt='icon of weather'/>
         <div>{Math.ceil(item.temp.max)} / {Math.ceil(item.temp.night)} &#8451;</div>
       </div>
     </div>

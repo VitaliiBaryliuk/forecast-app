@@ -24,7 +24,7 @@ function mapDispatchToProps(dispatch) {
     onFormSubmit: targetCity => {
       dispatch(actions.input.setTargetCity(targetCity))
       dispatch(actions.input.setLastQueries(targetCity))
-      dispatch(actions.fetchData.itemsFetchData(BASE_API_URL + targetCity + '&type=like&units=metric' + '&cnt=7' + API_KEY))
+      dispatch(actions.fetchData.itemsFetchData(BASE_API_URL + targetCity + '&type=like&units=metric&cnt=7' + API_KEY))
     },
   }
 }

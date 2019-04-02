@@ -11,11 +11,11 @@ const store = configureStore({})
 
 ReactDOM.render(
   <Provider  store={store}>
-    <BrowserRouter basename='forecast-app'>
+    <BrowserRouter basename='/forecast-app'>
       <App />
     </BrowserRouter>
   </Provider>,    
-  document.getElementById('app')
+  document.getElementById('root')
 );
 
 module.hot.accept();

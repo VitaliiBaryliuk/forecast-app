@@ -6,11 +6,11 @@ import ForecastDay from '../ForecastDay';
 const Forecast = ({inputValue, items, onFormSubmit, lastQueries}) => (
     <div className='forecast'>
       <form 
-        className='forecast__form'
         name='forecast'
+        className='forecast__form'
         onSubmit={e => {
           e.preventDefault()
-          const input = forecast.input
+          const input = document.forms.forecast.input
           onFormSubmit(input.value)
           input.value = ''
         }} 
@@ -38,7 +38,7 @@ const Forecast = ({inputValue, items, onFormSubmit, lastQueries}) => (
           </ul>
         </div>
         <h2>{items.city.name}</h2>
-        <ForecastDay item={items.list[(new Date).getDay()-1]} />
+        <ForecastDay item={items.list[(new Date()).getDay()-1]} />
           <div className='link-wrapper'>
             <NavLink className='forecast__link' to='/week'>Forecast for week</NavLink>
           </div>
