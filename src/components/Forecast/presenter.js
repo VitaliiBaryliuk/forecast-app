@@ -38,7 +38,7 @@ const Forecast = ({inputValue, items, onFormSubmit, lastQueries}) => (
           </ul>
         </div>
         <h2>{items.city.name}</h2>
-        <ForecastDay item={items.list[(new Date()).getDay()-1]} />
+        <ForecastDay item={items.list[0]} />
           <div className='link-wrapper'>
             <NavLink className='forecast__link' to='/week'>Forecast for week</NavLink>
           </div>
