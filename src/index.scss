@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  background-image: url('images/background.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5%;
+  border-radius: 5px;
+
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    height: 35px;
+  }
+
+  &__form>input {
+    width: 100%;
+    margin-right: 3%;
+    padding-left: 3%;
+    font-size: 20px;
+  }
+
+  &__form>button {
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #51ad7f;
+    color: white;
+    border: rgba(53, 119, 86, 0.5);
+    cursor: pointer;
+  }
+
+  &__main-info {
+    width: 100%;
+  }
+
+  &__last-queries {
+    width: 100%;
+  }
+  
+  &__last-queries-list {
+    padding: 0px;
+    display: inline;
+  }
+
+  &__last-queries-list>li {
+    display: inline;
+    list-style: none;
+    margin-left: 5px;
+  }
+
+  &__day {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.6); 
+  }
+
+  &__day-left {
+    display: flex;
+  }
+
+  &__day-date {
+    align-self: flex-start; 
+  }
+
+  &__day-main {
+    align-self: flex-start;
+    margin-left: 5px;
+  }
+
+  &__day-right {
+    display: flex;
+  }
+
+  &__weather-icon {
+    position: relative;
+    top: -7px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #51ad7f;
+  }
+
+  &__link:hover {
+    color: #6dcc9c;
+  }
+}
+
+.link-wrapper {
+  text-align: center;
+}
+
+@media (max-width: 769px) {
+  body {
+    padding-bottom: 100%;
+    background-size: auto;
+    font-size: 32px;
+  }
+
+  .forecast {
+    width: 80%;
+
+    &__form {
+      height: 50px;
+    }
+
+    &__form>input, &__form>button {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 100%;
+    background-size: auto;
+    font-size: 24px;
+  }
+
+  .forecast {
+    width: 80%;
+
+    &__form {
+      height: 40px;
+    }
+
+    &__form>input, &__form>button {
+      font-size: 24px;
+    }
+  }
+}
+
